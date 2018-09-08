@@ -47,8 +47,6 @@ nothing happens
 Type [CTRL + C] to get your prompt back.
 ----------
 
-
-
 ==========
 5. Say good mornin' again with quotes!
 
@@ -144,12 +142,11 @@ Use ls to verify that it downloaded.
 Write down the command that you used to download the file below.  Additionally, write the output of the command below.
 ----------
 
-curl -o mtec1002-lab-02.zip http://foureyes.github.io/mtec1002-spring2014/labs/02/mtec1002-lab-02.zip
+curl -O http://foureyes.github.io/mtec1002-spring2014/labs/02/mtec1002-lab-02.zip
 
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-100   178  100   178    0     0   5933      0 --:--:-- --:--:-- --:--:--  5741
-
+100   178  100   178    0     0   1000      0 --:--:-- --:--:-- --:--:--  1005
 
 ==========
 14. We learned a command to uncompress a .zip file.  Use it to extract the files and folders from the file you just downloaded.
@@ -157,7 +154,7 @@ curl -o mtec1002-lab-02.zip http://foureyes.github.io/mtec1002-spring2014/labs/0
 Write down the command that you used to uncompress the file.
 ----------
 
-
+unzip mtec1002-lab-02.zip
 
 ==========
 15. Change to the directory that was just created.  List the contents (of the directory that was extracted from the labs .zip file). 
@@ -165,7 +162,7 @@ Write down the command that you used to uncompress the file.
 Copy and paste the output below.
 ----------
 
-
+books	logs	web
 
 ==========
 We're going to mess around with archiving and compressing files.  We'll make a directory with a file in it... archive and compress it.... and uncompress it elsewhere.
@@ -176,7 +173,12 @@ We're going to mess around with archiving and compressing files.  We'll make a d
 Copy and paste the output below.
 ----------
 
-
+Applications		GameMakerStudio2	mtec1002
+Creative Cloud Files	Library			myApp
+Desktop			Movies			preptwilio.py
+Documents		Music			stuff
+Downloads		Pictures
+GameMaker		Public
 
 ==========
 17. Change into the "stuff" directory that you just created.  Run the following command (we haven't learned this exact command yet, but we will in the next lab!) exactly as described below:
@@ -188,7 +190,7 @@ List the files in the directory you're currently in (which should be stuff).
 Copy and paste the output below.
 ----------
 
-
+hello.txt
 
 ==========
 18. Go up one directory back into your home directory.  Run the following commands exactly to create a compressed archive of the stuff folder.
@@ -200,7 +202,12 @@ List the files in the directory you're currently in (which should be home).
 Copy and paste the output below.
 ----------
 
-
+Applications		GameMakerStudio2	mtec1002
+Creative Cloud Files	Library			myApp
+Desktop			Movies			preptwilio.py
+Documents		Music			stuff
+Downloads		Pictures		stuff.tar
+GameMaker		Public
 
 ==========
 19. Go up one directory back into your home directory.  Run the following commands exactly to create a compressed archive of the stuff folder.
@@ -210,7 +217,7 @@ $ tar -cvf stuff.tar stuff
 Copy and paste the output below.
 ----------
 
-
+why am i doing this twice
 
 ==========
 20. List the files in the directory you're currently in (which should be home).  
@@ -218,7 +225,7 @@ Copy and paste the output below.
 Copy and paste the output below. (It should contain stuff.tar)
 ----------
 
-
+again?
 
 ==========
 21. Now compress it!  Type:
@@ -228,7 +235,12 @@ gzip stuff.tar
 List your files again.... you should have a new file with a .gz extension.  Copy and paste the output of your this below.
 ----------
 
-
+Applications		GameMakerStudio2	mtec1002
+Creative Cloud Files	Library			myApp
+Desktop			Movies			preptwilio.py
+Documents		Music			stuff
+Downloads		Pictures		stuff.tar.gz
+GameMaker		Public
 
 ==========
 22. Move stuff.tar.gz into the lab directory that we downloaded.  We didn't learn this command yet, so just type in exactly as is:
@@ -242,6 +254,7 @@ Change your directory to mtec1002-lab-02.
 List the files.  Copy and paste the output below (stuff.tar.gz should be there).
 ----------
 
+books		logs		stuff.tar.gz	web
 
 ==========
 23. You should be in the lab directory.  Let's uncompress the file.
@@ -251,14 +264,12 @@ $ tar -xvf stuff.tar.gz
 List the files.  Copy and paste the output below (the folder, stuff, should be there).
 ----------
 
-
+books		logs		stuff		stuff.tar.gz	web
 
 ==========
 24. Go back to your home directory
 [No output]
 ----------
-
-
 
 ==========
 25. Download and uncompress this file using curl and tar -xvf in your home directory:
@@ -270,8 +281,10 @@ REMEMBER to use the -o flag and specifiy a filenmae that ends in .tar.gz
 Write out the commands that you used to do this.
 ----------
 
-
+curl -O http://foureyes.github.io/mtec1002/labs/02/secret.tar.gz
 
 ==========
 26. How many files were in the archive.  What were their names?  Write out your answers below.
 ----------
+
+404 - file not found.
